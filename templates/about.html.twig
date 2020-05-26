@@ -1,0 +1,34 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} - O nas{% endblock %}
+
+{% block page_contents %}
+    <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-6 col-lg-5 d-flex">
+                    <div class="img d-flex align-self-stretch align-items-center" style="
+                            background-image:url({{ asset('images/fit-8.png') }});
+                            border: 2px solid #FF6600;
+                            border-bottom: none;
+                            border-top-left-radius: 1rem;
+                            border-top-right-radius: 1rem;"
+                    ></div>
+                </div>
+                <div class="col-md-6 col-lg-7 pl-lg-5 py-5">
+                    <div class="py-md-5">
+                        <div class="row justify-content-start pb-3">
+                            <div class="col-md-12 heading-section ftco-animate">
+                                <span class="subheading">Kim jesteśmy</span>
+                                <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">Polska firma - <span class="number">{{ experienceYears }}</span>&nbsp;lat doświadczenia</h2>
+                                <p>Jesteśmy polską firmą z {{ experienceYears }}-letnim doświadczeniem. Posiadamy blisko 300 gabinetów w Polsce, a ponad 1000 na całym świecie (Niemcy, Australia, Wielka Brytania, Belgia, Ukraina, Turcja). Koncept stworzony przez Kobietę dla Kobiet sprawił, że zaufały nam tysiące zadowolonych Kobiet.</p>
+                                <p>Nasze podejście w dążeniu do pięknej sylwetki jest kompleksowe i opiera się na: planie żywieniowym, regeneracji, suplementacji, kosmetykach, treningach, zabiegach, relaksie oraz kosmetologii estetycznej bez skalpela.</p>
+                                <p>Charakteryzuje nas: <strong>indywidualne</strong> podejście, stały monitoring <strong>efektów</strong>, <strong>koncentracja</strong> na osiągnięciu pożądanego celu, miejsce tylko dla <strong>kobiet</strong>, <strong>dostępność</strong> 6 dni w tygodniu, <strong>atmosfera</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

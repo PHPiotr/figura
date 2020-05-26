@@ -1,0 +1,117 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Fitness{% endblock %}
+
+{% block page_contents %}
+    <section class="ftco-section ftco-no-pb ftco-no-pt ftco-program bg-light" id="programs-section">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-4 ftco-animate py-5 nav-link-wrap js-fullheight">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link px-4 {% if route_name == "fitness_swan_shaper" %}active{% endif %}"
+                           id="v-pills-1-tab" href="{{ path('fitness_swan_shaper') }}" role="tab"
+                           aria-controls="v-pills-1" aria-selected="true">Swan Shaper</a>
+
+                        <a class="nav-link px-4 {% if route_name == "fitness_vacu_shaper" %}active{% endif %}"
+                           id="v-pills-2-tab" href="{{ path('fitness_vacu_shaper') }}" role="tab"
+                           aria-controls="v-pills-2" aria-selected="false">Vacu Shaper</a>
+
+                        <a class="nav-link px-4 {% if route_name == "fitness_roll_shaper" %}active{% endif %}"
+                           id="v-pills-3-tab" href="{{ path('fitness_roll_shaper') }}" role="tab"
+                           aria-controls="v-pills-3" aria-selected="false">Roll Shaper</a>
+
+                        <a class="nav-link px-4 {% if route_name == "fitness_vibration_platform" %}active{% endif %}"
+                           id="v-pills-4-tab" href="{{ path('fitness_vibration_platform') }}" role="tab"
+                           aria-controls="v-pills-4" aria-selected="false">Platforma Wibracyjna</a>
+
+                        <a class="nav-link px-4 {% if route_name == "fitness_horizontal_bike" %}active{% endif %}"
+                           id="v-pills-5-tab" href="{{ path('fitness_horizontal_bike') }}" role="tab"
+                           aria-controls="v-pills-5" aria-selected="false">Rower Poziomy</a>
+                    </div>
+                </div>
+                <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex js-fullheight"
+                     style="background: #ffffff">
+
+                    <div class="tab-content pl-md-5" id="v-pills-tabContent">
+
+                        {% if route_name == "fitness" %}
+                            <div class="tab-pane fade show active py-0" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                                <span class="icon mb-3 d-block">
+                                    <img src="{{ asset('images/strefa-fitness.jpg') }}" height="300"/>
+                                </span>
+                                <h2 class="mb-4">Strefa Fitness</h2>
+                                <p>Oferujemy stacje treningowe o szerokim zakresie działania, które pomagają̨
+                                    modelować i wyszczuplać ciało, a jednocześnie dbają o skórę na poziomie
+                                    komórkowym, ujędrniają ją oraz zagęszczają.</p>
+                            </div>
+                        {% endif %}
+
+                        <div class="tab-pane fade {% if route_name == "fitness_swan_shaper" %}show active{% endif %} py-0"
+                             id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                            <span class="icon mb-3 d-block">
+                                <img src="{{ asset('images/swan-shaper.jpg') }}" height="300"/>
+                            </span>
+                            <h2 class="mb-4">Swan Shaper</h2>
+                            <p>Swan Shaper to urządzenie do kompleksowego modelowania sylwetki. Poprzez innowacyjne
+                                połączenie 4 komponentów: lamp podczerwonych (dla głębokiej odbudowy włókien
+                                kolagenowych), kolagenowej terapii światłem (dla regeneracji wierzchniej warstwy skóry),
+                                systemu jonizacji (rewelacyjna moc jonów ujemnych), skrętny eliptyk (uaktywnienie
+                                wszystkich partii mięśni), jest doskonałym sprzymierzeńcem w modelowaniu sylwetki.</p>
+                        </div>
+
+                        <div class="tab-pane fade {% if route_name == "fitness_vacu_shaper" %}show active{% endif %} py-0"
+                             id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                            <span class="icon mb-3 d-block">
+                                <img src="{{ asset('images/vacu-shaper.jpg') }}" height="300"/>
+                            </span>
+                            <h2 class="mb-4">Vacu Shaper</h2>
+                            <p>Vacu Shaper łączy zalety wysiłku fizycznego i działania podciśnienia. Dzięki wykonywaniu
+                                klasycznych ruchów na bieżni (zdecydowany marsz) oraz panującemu podciśnieniu w kapsule,
+                                polepsza się krążenie krwi, głównie w miejscach gdzie powstaje cellulit. Przyspiesza
+                                również krążenie limfy, dzięki czemu z organizmu szybciej usuwane są toksyny. Spalanie
+                                tkanki tłuszczowej następuje przy wysiłku dużo mniejszym niż przy normalnym treningu -
+                                jedynie przy 50% maksymalnego obciążenia serca. Porównywalnie do klasycznego treningu w
+                                tym samym czasie ćwiczeń spalamy cztery razy szybciej tkankę tłuszczową.</p>
+                        </div>
+
+                        <div class="tab-pane fade {% if route_name == "fitness_roll_shaper" %}show active{% endif %} py-0"
+                             id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+                            <span class="icon mb-3 d-block">
+                                <img src="{{ asset('images/roll-shaper.jpg') }}" height="300"/>
+                            </span>
+                            <h2 class="mb-4">Roll Shaper</h2>
+                            <p>Roll Shaper to urządzenie wykonujące masaż, który pobudza wytwarzanie nowych płynów
+                                limfatycznych i rozbudowę naczyń limfatycznych. Jest to jedna z najskuteczniejszych
+                                metod odchudzania i usuwania cellulitu. Pomoże Ci poczuć się lepiej po dniu pełnym
+                                stresu. W trakcie masażu poczujesz relaks, natomiast po zabiegu – energię do
+                                działania.</p>
+                        </div>
+
+                        <div class="tab-pane fade {% if route_name == "fitness_vibration_platform" %}show active{% endif %} py-0"
+                             id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+                            <span class="icon mb-3 d-block">
+                                <img src="{{ asset('images/platforma-wibracyjna.jpg') }}" height="300"/>
+                            </span>
+                            <h2 class="mb-4">Platforma Wibracyjna</h2>
+                            <p>Wibracje o różnej częstotliwości wywołują skurcz mięśni podobny do tego, który następuje
+                                podczas ćwiczeń fizycznych. W wygodny sposób uzyskujemy efekty niemal identyczne z
+                                wielogodzinnym treningiem na siłowni. Najlepsze efekty redukcji tkanki tłuszczowej można
+                                zaobserwować na brzuchu, udach, pośladkach i rękach.</p>
+                        </div>
+
+                        <div class="tab-pane fade {% if route_name == "fitness_horizontal_bike" %}show active{% endif %} py-0"
+                             id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
+                            <span class="icon mb-3 d-block">
+                                <img src="{{ asset('images/rower-poziomy.jpg') }}" height="300"/>
+                            </span>
+                            <h2 class="mb-4">Rower Poziomy</h2>
+                            <p>Rower poziomy jest przeznaczony dla Pań, które chcą podczas ćwiczeń odciążyć odcinek
+                                lędźwiowy kręgosłupa oraz stawy kolanowe. Na rowerze przeprowadzane są treningi cardio,
+                                interwały oraz treningi wydolnościowe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Zabiegi estetyczne{% endblock %}
+
+{% block page_contents %}
+    <section class="ftco-section ftco-schedule" id="schedule-section">
+        <div class="container">
+            <div class="ftco-schedule">
+                <div class="row">
+                    <div class="col-md-4 nav-link-wrap">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link ftco-animate {% if route_name == "aesthetics_liposuction" %}active{% endif %}" id="v-pills-8-tab" href="{{ path('aesthetics_liposuction') }}" role="tab" aria-controls="v-pills-8" aria-selected="{% if route_name == "aesthetics_liposuction" %}true{% else %}false{% endif %}">Liposukcja</a>
+                            <a class="nav-link ftco-animate {% if route_name == "aesthetics_endermology" %}active{% endif %}" id="v-pills-9-tab" href="{{ path('aesthetics_endermology') }}" role="tab" aria-controls="v-pills-9" aria-selected="{% if route_name == "aesthetics_endermology" %}true{% else %}false{% endif %}">Endermologia</a>
+                            <a class="nav-link ftco-animate {% if route_name == "aesthetics_multipolar_wave" %}active{% endif %}" id="v-pills-10-tab" href="{{ path('aesthetics_multipolar_wave') }}" role="tab" aria-controls="v-pills-10" aria-selected="{% if route_name == "aesthetics_multipolar_wave" %}true{% else %}false{% endif %}">Fala multipolarna</a>
+                            <a class="nav-link ftco-animate {% if route_name == "aesthetics_lipolaser" %}active{% endif %}" id="v-pills-11-tab" href="{{ path('aesthetics_lipolaser') }}" role="tab" aria-controls="v-pills-11" aria-selected="{% if route_name == "aesthetics_lipolaser" %}true{% else %}false{% endif %}">Lipolaser</a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 tab-wrap">
+
+                        <div class="tab-content" id="v-pills-tabContent">
+
+                            {% if route_name == "aesthetics" %}
+                                <div class="tab-pane fade show active" id="v-pills-8">
+                                    <div class="coach-wrap ftco-animate d-sm-flex">
+                                        <div class="img coach-img" style="background-image: url({{ asset('images/zabiegi-estetyczne.jpg') }});"></div>
+                                        <div class="text pl-md-5">
+                                            <h2>Zabiegi estetyczne</h2>
+                                            <p>Dysponujemy szerokim wachlarzem innowacyjnych urządzeń kosmetologicznych, pozwalających osiągnąć spektakularne rezultaty w dziedzinie kosmetologii estetycznej. Nasze kombajny kosmetyczne umożliwiają wykonywanie najnowocześniejszych zabiegów, stanowiących przełom w dziedzinie małoinwazyjnych metod walki z postępującym starzeniem skóry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            <div class="tab-pane fade {% if route_name == "aesthetics_liposuction" %}show active{% endif %}" id="v-pills-8" role="tabpanel" aria-labelledby="day-8-tab">
+                                <div class="coach-wrap ftco-animate d-sm-flex">
+                                    <div class="img coach-img" style="background-image: url({{ asset('images/liposukcja.jpg') }});"></div>
+                                    <div class="text pl-md-5">
+                                        <h2>Liposukcja kawitacyjna</h2>
+                                        <p>rozbija tkanki tłuszczowej za pomocą ultradźwięków, dotlenia, poprawia ukrwienie, pomaga rozbić grudki tłuszczu pod skórą</p>
+                                        <h3 class="coach-name">&#9679; <span>efekt po pierwszym zabiegu</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>zmniejszenie obwodów od 2 cm do 8 cm</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>zwiększenie napięcia skóry</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>wygładzenie skóry</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>całkowicie bezbolesna</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade {% if route_name == "aesthetics_endermology" %}show active{% endif %}" id="v-pills-9" role="tabpanel" aria-labelledby="v-pills-day-9-tab">
+                                <div class="coach-wrap ftco-animate d-sm-flex">
+                                    <div class="img coach-img" style="background-image: url({{ asset('images/endermologia-1.png') }});"></div>
+                                    <div class="text pl-md-5">
+                                        <h2>Endermologia</h2>
+                                        <p>Rewolucja w modelowaniu problematycznych partii ciała.
+                                            Najnowsze rozwiązania medycyny estetycznej. Kompleksowe działanie na ciało i twarz. Połączenie masażu podciśnieniowego vacuum rolkami kierunkowymi i bipolarnymi falami RF+ IR + <strong>liposukcja kawitacyjna</strong>. Zabieg jest nieinwazyjny i bezbolesny.</p>
+                                        <h3 class="coach-name">&#9679; <span>ujędrnienie skóry</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja tkanki tłuszczowej</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja cellulitu</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>modelowanie sylwetki</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>usuwanie toksyn</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>lifting skóry w okolicach oczu i szyi</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>efekty widoczne już po 1 zabiegu</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>wspomaganie leczenia blizn</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>spłycanie zmarszczek</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>podniesienie pośladków</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>silny efekt ujędrniający</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja obrzęków pod oczami</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade {% if route_name == "aesthetics_multipolar_wave" %}show active{% endif %}" id="v-pills-10" role="tabpanel" aria-labelledby="v-pills-day-10-tab">
+                                <div class="coach-wrap ftco-animate d-sm-flex">
+                                    <div class="img coach-img" style="background-image: url({{ asset('images/fala-multipolarna.jpg') }});"></div>
+                                    <div class="text pl-md-5">
+                                        <h2>Fala multiolarna</h2>
+                                        <p>Fale radiowe to jedna z najskuteczniejszych energii stosowanych do redukcji cellulitu i tkanki tłuszczowej. Fale RF oddziałują zarówno na tkanki powierzchowne jak i docierają do głębokich warstw skóry i komórek tłuszczowych. Działają odmładzająco, stymulują produkcję kolagenu, uelastyczniają i poprawiają napięcie skóry. Zabiegi mogą być stosowane nie tylko na ciało, ale również na szyję, dekolt i twarz.</p>
+                                        <h3 class="coach-name">&#9679; <span>wyszczuplenie i redukcja miejscowej tkanki tłuszczowej</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>konturowanie twarzy</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja podwójnego podbródka</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja cellulitu</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja zwiotczeń (na brzuchu, ramionach, udach, pośladkach)</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>polepszenie stanu skóry w miejscach występowania blizn i rozstępów</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>poprawa napięcia skóry</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade {% if route_name == "aesthetics_lipolaser" %}show active{% endif %}" id="v-pills-11" role="tabpanel" aria-labelledby="v-pills-day-11-tab">
+                                <div class="coach-wrap ftco-animate d-sm-flex">
+                                    <div class="img coach-img" style="background-image: url({{ asset('images/lipolaser.jpg') }});"></div>
+                                    <div class="text pl-md-5">
+                                        <h2>Lipolaser</h2>
+                                        <p>Uderzenia światła o wysokiej intensywności rozbijają nadmiar tkanki tłuszczowej w płytkich warstwach skórnych. Energia wiązki laserowej rozbija komórki tłuszczowe i zamienia je w substancję oleistą, która naturalnie zostaje wydalona z organizmu. Metoda ta przynosi efekty w postaci zauważalnego zmniejszenia obwodów części ciała poddanych zabiegowi. Zabieg jest bezinwazyjny i bezbolesny.</p>
+                                        <h3 class="coach-name">&#9679; <span>redukcja nadmiaru tkanki tłuszczowej</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja cellulitu</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>widoczne wygładzenie skóry</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>redukcja rozstępów</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>poprawa procesu metabolicznego</span></h3>
+                                        <h3 class="coach-name">&#9679; <span>rezultaty widoczne już po pierwszym zabiegu</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

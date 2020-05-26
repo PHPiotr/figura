@@ -1,0 +1,34 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ status_code }} {{ status_text }} - {{ parent() }}{% endblock %}
+
+{% block page_contents %}
+    <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-6 col-lg-5 d-flex">
+                    <div class="img d-flex align-self-stretch align-items-center" style="
+                            background-image:url({{ asset('images/fit-8.png') }});
+                            border: 2px solid #FF6600;
+                            border-bottom: none;
+                            border-top-left-radius: 1rem;
+                            border-top-right-radius: 1rem;"
+                    ></div>
+                </div>
+                <div class="col-md-6 col-lg-7 pl-lg-5 py-5">
+                    <div class="py-md-5">
+                        <div class="row justify-content-start pb-3">
+                            <div class="col-md-12 heading-section ftco-animate">
+                                <span class="subheading">{{ status_text }}</span>
+                                <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">{{ status_code }}</h2>
+                                <a title="Powrót do strony głównej" rel="nofollow" href="{{ path('home') }}">
+                                    Powrót do strony głównej
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

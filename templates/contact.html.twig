@@ -1,0 +1,129 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Kontakt{% endblock %}
+
+{% block page_contents %}
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2 class="mb-4">Skontaktuj się z nami</h2>
+                </div>
+            </div>
+            {% for label, messages in app.flashes(['success', 'danger']) %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
+            <div class="row block-9">
+                <div class="col-md-7 order-md-last d-flex">
+                    {{ form_start(form, {'attr': {'class': 'bg-light p-4 p-md-5 contact-form', 'novalidate': 'novalidate'}}) }}
+                        {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                </div>
+
+                <div class="col-md-5 d-flex">
+                    <div class="row d-flex contact-info mb-5">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="box p-2 px-3 bg-light d-flex">
+                                <div class="icon mr-3">
+                                    <span class="icon-map-signs"></span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-3">Adres</h3>
+                                    <p>{{ companyAddress }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 ftco-animate">
+                            <div class="box p-2 px-3 bg-light d-flex">
+                                <div class="icon mr-3">
+                                    <span class="icon-phone2"></span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-3">Telefon</h3>
+                                    <p><a href="tel://{{ contactPhone }}">{{ contactPhone }}</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 ftco-animate">
+                            <div class="box p-2 px-3 bg-light d-flex">
+                                <div class="icon mr-3">
+                                    <span class="icon-paper-plane"></span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-3">Email</h3>
+                                    <p><a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 ftco-animate">
+                            <div class="box p-2 px-3 bg-light d-flex">
+                                <div class="icon mr-3">
+                                    <span class="icon-globe"></span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-3">Facebook</h3>
+                                    <p><a href="{{ facebookUrl }}">Studio-Figura-Zakopane</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div id="map" class="bg-white"></div>
+    </section>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        function initMap() {
+            const position = {lat: {{ googleMapsLat }}, lng: {{ googleMapsLng }}};
+            const content = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Studio Figura Zakopane</h1>'+
+                '<div id="bodyContent">'+
+                '<p>{{ companyAddress }}</p>'+
+                '</div>'+
+                '</div>';
+
+            const infowindow = new google.maps.InfoWindow({content});
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: position,
+                scrollwheel: false,
+                styles: [
+                    {
+                        "featureType": "administrative.country",
+                        "stylers": [{visibility: "simplified"}],
+                    },
+                    {
+                        "featureType": "poi.sports_complex",
+                        "stylers": [{visibility: "off"}],
+                    },
+                    {
+                        featureType: 'poi.business',
+                        stylers: [{visibility: 'off'}]
+                    },
+                ],
+            });
+            const marker = new google.maps.Marker({
+                position,
+                icon: '{{ asset('images/google-marker-icon.png') }}',
+                title: 'Studio Figura Zakopane',
+            });
+            marker.setMap(map);
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ googleMapsApiKey }}&callback=initMap"></script>
+{% endblock %}

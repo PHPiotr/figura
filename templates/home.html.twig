@@ -1,0 +1,172 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block page_contents %}
+    <section id="home-section" class="hero">
+        <div class="home-slider js-fullheight owl-carousel">
+            <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid p-0">
+                    <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end"
+                         data-scrollax-parent="true">
+                        <div class="one-third order-md-last img js-fullheight"
+                             style="background-image:url({{ asset('images/bg_1.jpg') }}); height: 100%">
+                            <h3 class="vr" style="background-image: url({{ asset('images/divider.jpg') }});">Studio</h3>
+                        </div>
+                        <div class="one-forth d-flex js-fullheight align-items-center ftco-animate"
+                             data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">Dla Ciebie</span>
+                                <h1 class="mb-4 mt-3">Z nami zyskasz <span>piękną sylwetkę</span></h1>
+                                <p></p>
+
+                                <p><a href="{{ path('contact') }}" class="btn btn-primary px-5 py-3 mt-3">Dołącz do
+                                        nas</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid p-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end"
+                         data-scrollax-parent="true">
+                        <div class="one-third order-md-last img js-fullheight"
+                             style="background-image:url({{ asset('images/bg_2.jpg') }});height: 100%">
+                            <h3 class="vr" style="background-image: url({{ asset('images/divider.jpg') }});">Figura</h3>
+                        </div>
+                        <div class="one-forth d-flex js-fullheight align-items-center ftco-animate"
+                             data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">Dla Twojego ciała</span>
+                                <h1 class="mb-4 mt-3">U nas osiągniesz <span>fantastyczne efekty</span></h1>
+
+                                <p><a href="{{ path('contact') }}" class="btn btn-primary px-5 py-3 mt-3">Dołącz do
+                                        nas</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h2 class="mb-4" style="padding-top: 40px;">Dla kobiet w każdym wieku i rozmiarze</h2>
+                    <p>Kompleksowe podejście w dążeniu do pięknej sylwetki.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services text-center d-block">
+                        <div class="home-img"><div class="img" style="
+                                    background-image: url({{ asset('images/fit-2.png') }});
+                                    height: 120px;
+                                    width: 120px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: top center;
+                                    border-radius: 50%;
+                                    margin: 0 auto;
+                                    "></div></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Kosmetologia</h3>
+                            <p>Kosmetologia estetyczna bez skalpela. Zabiegi redukujące tkankę tłuszczową. Zabiegi na
+                                twarz i ciało.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services text-center d-block">
+                        <div class="home-img"><div class="img" style="
+                                    background-image: url({{ asset('images/fit-1.png') }});
+                                    height: 120px;
+                                    width: 120px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: top center;
+                                    border-radius: 50%;
+                                    margin: 0 auto;
+                                    "></div></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Treningi i zabiegi</h3>
+                            <p>Doskonałe rezultaty otrzymasz przy połączeniu treningu z relaksującymi zabiegami ze
+                                strefy Wellness</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services text-center d-block">
+                        <div class="home-img"><div class="img" style="
+                                    background-image: url({{ asset('images/fit-3.png') }});
+                                    height: 120px;
+                                    width: 120px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: top center;
+                                    border-radius: 50%;
+                                    margin: 0 auto;
+                                    "></div></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Relaks i regeneracja</h3>
+                            <p>Zawsze rozpoczynaj od strefy Fitness, a następnie skorzystaj z Wellness - tu zasmakujesz
+                                odoczynku i relaksu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services text-center d-block">
+                        <div class="home-img"><div class="img" style="
+                                    background-image: url({{ asset('images/fit-7.png') }});
+                                    height: 120px;
+                                    width: 120px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: top center;
+                                    border-radius: 50%;
+                                    margin: 0 auto;
+                            "></div></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Plan żywieniowy</h3>
+                            <p>Najlepsze efekty osiąga się dzięki połączeniu aktywności fizycznej i dobrych nawyków
+                                żywieniowych.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services text-center d-block">
+                        <div class="home-img"><div class="img" style="
+                                    background-image: url({{ asset('images/fit-4.png') }});
+                                    height: 120px;
+                                    width: 120px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: top center;
+                                    border-radius: 50%;
+                                    margin: 0 auto;
+                                    "></div></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Suplementacja</h3>
+                            <p>Oczyszczamy organizm z toksyn. Przyspieszamy przemianę materii. Hamujemy przemianę
+                                glukozy w tłuszcze.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %}

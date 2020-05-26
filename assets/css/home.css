@@ -1,0 +1,13 @@
+.ftco-navbar-light {
+    position: absolute;
+}
+
+div.home.img div.img {
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 50%;
+    margin: 0 auto;
+}

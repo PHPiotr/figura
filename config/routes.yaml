@@ -1,3 +1,45 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+fitness:
+    path: /fitness
+    controller: App\Controller\FitnessController::index
+fitness_swan_shaper:
+    path: /fitness/swan-shaper
+    controller: App\Controller\FitnessController::swanShaper
+fitness_vacu_shaper:
+    path: /fitness/vacu-shaper
+    controller: App\Controller\FitnessController::vacuShaper
+fitness_roll_shaper:
+    path: /fitness/roll-shaper
+    controller: App\Controller\FitnessController::rollShaper
+fitness_vibration_platform:
+    path: /fitness/platforma-wibracyjna
+    controller: App\Controller\FitnessController::vibrationPlatform
+fitness_horizontal_bike:
+    path: /fitness/rower-poziomy
+    controller: App\Controller\FitnessController::horizontalBike
+wellness:
+    path: /wellness
+    controller: App\Controller\WellnessController::index
+aesthetics:
+    path: /zabiegi-estetyczne
+    controller: App\Controller\AestheticsController::index
+aesthetics_liposuction:
+    path: /zabiegi-estetyczne/liposukcja
+    controller: App\Controller\AestheticsController::liposuction
+aesthetics_endermology:
+    path: /zabiegi-estetyczne/endermologia
+    controller: App\Controller\AestheticsController::endermology
+aesthetics_multipolar_wave:
+    path: /zabiegi-estetyczne/fala-multipolarna
+    controller: App\Controller\AestheticsController::multipolarWave
+aesthetics_lipolaser:
+    path: /zabiegi-estetyczne/lipolaser
+    controller: App\Controller\AestheticsController::lipolaser
+about:
+    path: /o-nas
+    controller: App\Controller\AboutController::index
+contact:
+    path: /kontakt
+    controller: App\Controller\ContactController::index

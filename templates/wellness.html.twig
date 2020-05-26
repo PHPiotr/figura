@@ -1,0 +1,45 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Wellness{% endblock %}
+
+{% block page_contents %}
+    <section class="ftco-section ftco-services-2" id="services-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h2 class="mb-4">Strefa Wellness</h2>
+                    <p>Mamy do dyspozycji nowoczesne urządzenia, które w bezbolesny i mało inwazyjny sposób zadbają o nasze ciało oraz skórę, likwidując obrzęki, cellulit, pomagając zgubić zbędne centymetry oraz oddziaływując pielęgnacyjnie na skórę.</p>
+                </div>
+            </div>
+            <div class="row no-gutters services-section">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services text-center d-block">
+                        <div class="icon"><img src="{{ asset('images/elektrostymulacja.jpg?foo=test') }}" height="200"/></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Elektrostymulacja</h3>
+                            <p>Przy pomocy prądu o niskiej częstotliwości wywołuje się skurcz mięśni podobny do tego, który następuje podczas ćwiczeń fizycznych. W wygodny sposób uzyskujemy zatem efekty porównywalne z wielogodzinnym treningiem na siłowni. Najlepsze efekty redukcji tkanki tłuszczowej można zaobserwować na brzuchu, udach i pośladkach.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services services-2 text-center d-block">
+                        <div class="icon"><img src="{{ asset('images/sauna-infrared.jpg?foo=test') }}" height="200"/></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Sauna Infrared</h3>
+                            <p>Za ogrzewanie ciała odpowiadają promienniki podczerwieni, które wytwarzają fale podczerwone wnikające do 4,5 cm pod skórę. rozgrzewając nasze ciało. Dzięki temu ciało w dużo większym stopniu poci się i traci o 250% więcej płynów niż w tradycyjnej saunie. Temperatura w saunie na podczerwień wynosi maksymalnie 60 stopni. Można z niej korzystać w ubraniu, a także przy otwartych drzwiach.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services text-center d-block">
+                        <div class="icon"><img src="{{ asset('images/limfodrenaz.jpg') }}" height="200"/></div>
+                        <div class="media-body">
+                            <h3 class="heading mb-3">Limfodrenaż</h3>
+                            <p>Limfodrenaż to specjalistyczne urządzenie do wykonywania masażu, który intensywnie pobudza wytwarzanie nowych płynów limfatycznych oraz rozbudowę naczyń limfatycznych, Jest to jedna ze skuteczniejszych metod odchudzania i usuwania cellulitu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
