@@ -32,7 +32,8 @@ class ContactController extends AbstractController
                 'date' => date('d.m.Y H:i:s'),
             ]);
             $email = (new Email())
-                ->from($contact->getEmail())
+                ->from($this->getParameter('app.from_email'))
+                ->replyTo($contact->getEmail())
                 ->to($this->getParameter('app.to_email'))
                 ->subject('Studio Figura - Zakopane')
                 ->html($message);
