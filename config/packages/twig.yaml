@@ -1,2 +1,8 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    form_themes: ['bootstrap_4_layout.html.twig']
+    globals:
+        contactEmail: '%env(APP_FROM_EMAIL)%'
+        facebookUrl: '%env(APP_FACEBOOK_URL)%'
+        contactPhone: '%env(APP_CONTACT_PHONE)%'
+        companyAddress: '%env(APP_COMPANY_ADDRESS)%'

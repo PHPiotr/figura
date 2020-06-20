@@ -4,6 +4,15 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    app.admin_email: '%env(APP_ADMIN_EMAIL)%'
+    app.from_email: '%env(APP_FROM_EMAIL)%'
+    app.to_email: '%env(APP_TO_EMAIL)%'
+    app.facebook_url: '%env(APP_FACEBOOK_URL)%'
+    app.contact_phone: '%env(APP_CONTACT_PHONE)%'
+    app.company_address: '%env(APP_COMPANY_ADDRESS)%'
+    app.google_maps_api_key: '%env(APP_GOOGLE_MAPS_API_KEY)%'
+    app.google_maps_lat: '%env(APP_GOOGLE_MAPS_LAT)%'
+    app.google_maps_lng: '%env(APP_GOOGLE_MAPS_LNG)%'
 
 services:
     # default configuration for services in *this* file
