@@ -1,6 +1,13 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Zabiegi estetyczne{% endblock %}
+{% block title %}{{ parent() }}
+    {% if route_name == "aesthetics" %} - Zabiegi estetyczne
+    {% elseif route_name == "aesthetics_liposuction" %} - Liposukcja
+    {% elseif route_name == "aesthetics_endermology" %} - Endermologia
+    {% elseif route_name == "aesthetics_multipolar_wave" %} - Fala multipolarna
+    {% elseif route_name == "aesthetics_lipolaser" %} - Lipolaser
+    {% endif %}
+{% endblock %}
 
 {% block page_contents %}
     <section class="ftco-section ftco-schedule" id="schedule-section">

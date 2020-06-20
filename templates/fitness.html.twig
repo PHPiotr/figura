@@ -1,6 +1,14 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Fitness{% endblock %}
+{% block title %}{{ parent() }}
+    {% if route_name == "fitness" %} - Fitness
+    {% elseif route_name == "fitness_swan_shaper" %} - Swan Shaper
+    {% elseif route_name == "fitness_vacu_shaper" %} - Vacu Shaper
+    {% elseif route_name == "fitness_roll_shaper" %} - Roll Shaper
+    {% elseif route_name == "fitness_vibration_platform" %} - Platforma Wibracyjna
+    {% elseif route_name == "fitness_horizontal_bike" %} - Rower Poziomy
+    {% endif %}
+{% endblock %}
 
 {% block page_contents %}
     <section class="ftco-section ftco-no-pb ftco-no-pt ftco-program bg-light" id="programs-section">
