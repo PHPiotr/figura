@@ -43,3 +43,6 @@ about:
 contact:
     path: /kontakt
     controller: App\Controller\ContactController::index
+sitemap:
+    path: /sitemap.txt
+    controller: App\Controller\SitemapController::index
