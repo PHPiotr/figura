@@ -7,3 +7,4 @@ twig:
         contactPhone: '%env(APP_CONTACT_PHONE)%'
         companyAddress: '%env(APP_COMPANY_ADDRESS)%'
         googleVerificationCode: '%env(GOOGLE_VERIFICATION_CODE)%'
+        gtag: '%env(GTAG)%'
