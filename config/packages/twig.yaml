@@ -6,3 +6,4 @@ twig:
         facebookUrl: '%env(APP_FACEBOOK_URL)%'
         contactPhone: '%env(APP_CONTACT_PHONE)%'
         companyAddress: '%env(APP_COMPANY_ADDRESS)%'
+        googleVerificationCode: '%env(GOOGLE_VERIFICATION_CODE)%'
