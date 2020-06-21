@@ -57,7 +57,7 @@ class ContactController extends AbstractController
                 ]);
                 $this->addFlash(
                     'danger',
-                    'Coś poszło nie tak i Twoja wiadomość nie została wysłana. Spróbuj ponownie później.',
+                    'Coś poszło nie tak i Twoja wiadomość nie została wysłana. Spróbuj ponownie później.'
                 );
             }
 
@@ -71,53 +71,4 @@ class ContactController extends AbstractController
             'googleMapsLng' => $this->getParameter('app.google_maps_lng'),
         ]);
     }
-
-//    public function sendAction(Request $request)
-//    {
-//        if (!$request->isXmlHttpRequest()) {
-//            return $this->redirectToRoute('contact');
-//        }
-//
-//        if (!$request->isMethod('post')) {
-//            return JsonResponse::create(['ok' => false]);
-//        }
-//
-//        $contact = new Contact();
-//        $contact->email = trim($request->get('email'));
-//        $contact->phone = trim($request->get('phone'));
-//        $contact->message = trim($request->get('message'));
-//
-//        $validator = $this->get('validator');
-//        $constraintViolationList = $validator->validate($contact);
-//
-//        if (count($constraintViolationList) > 0) {
-//            foreach ($constraintViolationList->getIterator() as $constraintViolation) {
-//                $errors[$constraintViolation->getPropertyPath()] = $constraintViolation->getMessage();
-//            }
-//            return JsonResponse::create(['ok' => false, 'errors' => $errors]);
-//        }
-//
-//        $message = $this->renderView('AppBundle:Contact:email.html.twig', [
-//            'message' => $contact->message,
-//            'phone' => $contact->phone,
-//            'email' => $contact->email,
-//            'date' => date('d.m.Y H:i:s')
-//        ]);
-//
-//        $to = $this->getParameter('mailer_to');
-//        $subject = 'Studio Figura - Zakopane';
-//
-//        $headers[] = sprintf('From: %s', $contact->email);
-//        $headers[] = sprintf('Reply-To: %s', $contact->email);
-//        $headers[] = 'MIME-Version: 1.0';
-//        $headers[] = 'Content-Type: text/html; charset=UTF-8';
-//
-//        $sent = mail($to, $subject, $message, implode("\r\n", $headers), '-f ' . $contact->email);
-//
-//        if (!$sent) {
-//            return JsonResponse::create(['ok' => false, 'errors' => [], 'msg' => 'Problem z wysyłką']);
-//        }
-//
-//        return JsonResponse::create(['ok' => true, 'errors' => [], 'msg' => 'Wiadomość wysłana']);
-//    }
 }
